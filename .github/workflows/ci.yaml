@@ -1,0 +1,26 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types:
+      - opened
+      - synchronize
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+          components: rustfmt, clippy
+      - run: cargo fmt --all -- --check
+      - run: cargo clippy -- -D warnings
+      - run: cargo check
+      - run: cargo build
+      - run: cargo test
+      - run: cargo doc
