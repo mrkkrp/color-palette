@@ -1,3 +1,7 @@
+mod color;
+
+pub use crate::color::{mix, Component, Ryb, BLACK, WHITE};
+
 #[cfg(test)]
 mod tests {
     #[test]
