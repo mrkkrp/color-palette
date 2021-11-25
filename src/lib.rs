@@ -1,6 +1,7 @@
 mod color;
 
-pub use crate::color::{mix, Component, Ryb, BLACK, WHITE};
+pub use crate::color::{mix, Component, Ryb};
+pub use crate::color::{BLACK, BLUE, CYAN, GREEN, PURPLE, RED, WHITE, YELLOW};
 
 #[cfg(test)]
 mod tests {

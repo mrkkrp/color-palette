@@ -6,7 +6,13 @@ use std::primitive::f64;
 pub struct Ryb<T: Primitive>(pub [T; 3]);
 
 pub const BLACK: Ryb<f64> = Ryb([1.0, 1.0, 1.0]);
+pub const BLUE: Ryb<f64> = Ryb([0.0, 0.0, 1.0]);
+pub const CYAN: Ryb<f64> = Ryb([0.0, 0.5, 1.0]);
+pub const GREEN: Ryb<f64> = Ryb([0.0, 1.0, 1.0]);
+pub const PURPLE: Ryb<f64> = Ryb([1.0, 0.0, 0.5]);
+pub const RED: Ryb<f64> = Ryb([1.0, 0.0, 0.0]);
 pub const WHITE: Ryb<f64> = Ryb([0.0, 0.0, 0.0]);
+pub const YELLOW: Ryb<f64> = Ryb([0.0, 1.0, 0.0]);
 
 /// Trait for components of colors. We demand that any `Component` can be
 /// converted to and from `f64`.
