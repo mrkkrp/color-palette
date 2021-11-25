@@ -32,6 +32,15 @@ impl Component for f32 {
     }
 }
 
+impl Component for f64 {
+    fn to_f64(self) -> f64 {
+        self
+    }
+    fn from_f64(x: f64) -> f64 {
+        x
+    }
+}
+
 macro_rules! derive_scaling_component {
     ($type: ty) => {
         impl Component for $type {
